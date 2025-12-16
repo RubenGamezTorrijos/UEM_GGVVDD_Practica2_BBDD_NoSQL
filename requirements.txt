@@ -1,0 +1,29 @@
+﻿# MongoDB
+pymongo==4.6.0
+dnspython==2.4.2
+
+# Neo4j
+neo4j==5.14.0
+neo4j-driver==5.14.0
+
+# Redis
+redis==5.0.1
+
+# Procesamiento de datos
+pandas==2.1.4
+numpy==1.26.2
+python-rapidjson==1.13
+
+# Utilidades
+python-dotenv==1.0.0
+tqdm==4.66.1
+requests==2.31.0
+
+# Testing
+pytest==7.4.3
+pytest-benchmark==4.0.0
+
+# Jupyter para anÃ¡lisis
+jupyter==1.0.0
+matplotlib==3.8.2
+seaborn==0.13.0

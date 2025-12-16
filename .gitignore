@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+
+# Docker
+docker/data/
+docker/logs/
+
+# IDE
+.vscode/
+.idea/
+
+# Project Data (EXCLUDED LARGE FILES)
+data/raw/*.json
+data/processed/*.csv
+data/processed/*.json
+logs/
+results/*.json
+results/summary.txt
+
+# System
+thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+
+# Temporary files
+*.log
+debug_output.txt
+my_output.txt

@@ -1,0 +1,117 @@
+# docker-compose.yml
+version: '3.8'
+
+services:
+  # MongoDB
+  mongo:
+    image: mongo:7.0
+    container_name: uem_mongo
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: uem_password123
+      MONGO_INITDB_DATABASE: yelp_mongo
+    volumes:
+      - ./docker/mongo/init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro
+      - mongo_data:/data/db
+      - ./data/processed:/data/import
+    networks:
+      - uem_network
+    command: mongod --auth --bind_ip_all
+
+  # Mongo Express (Interfaz web)
+  mongo-express:
+    image: mongo-express:latest
+    container_name: uem_mongo_express
+    restart: unless-stopped
+    ports:
+      - "8081:8081"
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: admin
+      ME_CONFIG_MONGODB_ADMINPASSWORD: uem_password123
+      ME_CONFIG_MONGODB_URL: mongodb://admin:uem_password123@mongo:27017/
+      ME_CONFIG_BASICAUTH: false
+    networks:
+      - uem_network
+    depends_on:
+      - mongo
+
+  # Neo4j
+  neo4j:
+    image: neo4j:5-community
+    container_name: uem_neo4j
+    restart: unless-stopped
+    ports:
+      - "7474:7474" # HTTP
+      - "7687:7687" # Bolt
+    environment:
+      NEO4J_AUTH: neo4j/uem_password123
+      NEO4J_PLUGINS: '["apoc", "graph-data-science"]'
+      NEO4J_dbms_security_procedures_unrestricted: apoc.*,gds.*
+      NEO4J_apoc_import_file_enabled: true
+      NEO4J_apoc_export_file_enabled: true
+      NEO4J_dbms_security_procedures_allowlist: apoc.*,gds.*
+    volumes:
+      - neo4j_data:/data
+      - neo4j_logs:/logs
+      - neo4j_import:/var/lib/neo4j/import
+      - neo4j_plugins:/plugins
+      - ./data/processed:/import
+    networks:
+      - uem_network
+    healthcheck:
+      test: [ "CMD", "cypher-shell", "-u", "neo4j", "-p", "uem_password123", "RETURN 1" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Redis
+  redis:
+    image: redis:7.2-alpine
+    container_name: uem_redis
+    restart: unless-stopped
+    ports:
+      - "6389:6379"
+    command: redis-server --appendonly yes --requirepass uem_password123
+    networks:
+      - uem_network
+    healthcheck:
+      test: [ "CMD", "redis-cli", "--raw", "incr", "ping" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Redis Commander (Interfaz web)
+  redis-commander:
+    image: rediscommander/redis-commander:latest
+    container_name: uem_redis_commander
+    restart: unless-stopped
+    ports:
+      - "8082:8081"
+    environment:
+      REDIS_HOSTS: local:redis:6379:0:uem_password123
+    networks:
+      - uem_network
+    depends_on:
+      - redis
+
+networks:
+  uem_network:
+    driver: bridge
+    name: uem_network
+
+volumes:
+  mongo_data:
+    driver: local
+  neo4j_data:
+    driver: local
+  neo4j_logs:
+    driver: local
+  neo4j_import:
+    driver: local
+  neo4j_plugins:
+    driver: local
+  redis_data:
+    driver: local
