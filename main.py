@@ -510,7 +510,7 @@ def main():
         logger.info("PrÃ¡ctica completada exitosamente")
         
     except Exception as e:
-        logger.error(f"Error durante la ejecuciÃ³n: {e}")
+        logger.error(f"Error durante la ejecucion: {e}")
         raise
     
     finally:
