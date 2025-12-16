@@ -322,8 +322,8 @@ class NoSQLPractice:
         conclusions = {
             'data_modeling': 'Cada sistema optimiza un patrÃ³n diferente de datos',
             'performance_tradeoffs': 'Redis > MongoDB > Neo4j para consultas simples',
-            'recommendations': 'Sistemas hÃ­bridos ofrecen el mejor balance',
-            'learning_curve': 'MongoDB mÃ¡s accesible, Neo4j mÃ¡s especializado'
+            'recommendations': 'Sistemas hi­bridos ofrecen el mejor balance',
+            'learning_curve': 'MongoDB mas accesible, Neo4j mas especializado'
         }
         comparative_results['conclusions'] = conclusions
         
