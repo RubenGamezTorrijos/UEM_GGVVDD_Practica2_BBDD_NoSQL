@@ -14,7 +14,6 @@ docker/logs/
 .idea/
 
 # Project Data (EXCLUDED LARGE FILES)
-data/raw/*.json
 data/processed/*.csv
 data/processed/*.json
 logs/

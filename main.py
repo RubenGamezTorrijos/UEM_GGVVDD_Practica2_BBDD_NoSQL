@@ -1,5 +1,5 @@
 ﻿#!/usr/bin/env python3
-# main.py - Script principal de la prÃ¡ctica
+# main.py - Script principal de la practica
 
 import argparse
 import logging
@@ -31,7 +31,7 @@ class NoSQLPractice:
         self.benchmark = PerformanceBenchmark()
         self.results = {
             'timestamp': datetime.now().isoformat(),
-            'author': os.getenv('AUTHOR', 'Tu_Nombre'),
+            'author': os.getenv('AUTHOR', 'Ruben Gamez Torrijos'),
             'systems': {}
         }
     
@@ -251,10 +251,23 @@ class NoSQLPractice:
         
         section_results = {}
         
-        # 1. Cargar datos de ejemplo
-        sample_path = Path(__file__).parent / "data" / "samples" / "business_sample.json"
-        with open(sample_path, 'r') as f:
-            sample_data = [json.loads(line) for line in f.readlines()[:100]]
+        # 1. Cargar datos de ejemplo desde los datos originales de Yelp
+        sample_path = Path(__file__).parent / "data" / "raw" / "business.json"
+        
+        # Verificar si existe
+        if not sample_path.exists():
+             logger.error(f"No encontrado {sample_path}. Descargue el Yelp Dataset primero.")
+             return {'error': 'Dataset not found'}
+        
+        with open(sample_path, 'r', encoding='utf-8') as f:
+            # Leer solo los primeros 100 negocios para el ranking de ejemplo
+            sample_data = []
+            for i, line in enumerate(f):
+                if i >= 100: break
+                try:
+                    sample_data.append(json.loads(line))
+                except json.JSONDecodeError:
+                    continue
         
         # 2. Crear rankings
         self.redis.create_rankings(sample_data)

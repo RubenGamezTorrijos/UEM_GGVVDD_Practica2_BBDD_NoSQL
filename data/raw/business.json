@@ -1,0 +1,100 @@
+{"business_id": "BUS0000", "name": "La Para\u00edso Tienda", "city": "Sevilla", "state": "AN", "categories": "Coffee & Tea, Home Services, Restaurants", "stars": 3.6, "review_count": 386}
+{"business_id": "BUS0001", "name": "El Rinc\u00f3n Bar", "city": "Bilbao", "state": "PV", "categories": "Home Services", "stars": 3.3, "review_count": 461}
+{"business_id": "BUS0002", "name": "La Sabroso Cafeter\u00eda", "city": "M\u00e1laga", "state": "AN", "categories": "Arts & Entertainment, Shopping, Restaurants", "stars": 3.0, "review_count": 371}
+{"business_id": "BUS0003", "name": "El Sabroso Cafeter\u00eda", "city": "Madrid", "state": "AN", "categories": "Hotels, Home Services", "stars": 4.8, "review_count": 298}
+{"business_id": "BUS0004", "name": "La Rinc\u00f3n Bar", "city": "Sevilla", "state": "PV", "categories": "Home Services", "stars": 3.4, "review_count": 481}
+{"business_id": "BUS0005", "name": "Los Rinc\u00f3n Bar", "city": "Bilbao", "state": "MD", "categories": "Health & Medical, Arts & Entertainment, Shopping", "stars": 2.6, "review_count": 205}
+{"business_id": "BUS0006", "name": "La Sabroso Tienda", "city": "M\u00e1laga", "state": "CT", "categories": "Health & Medical, Home Services, Hotels", "stars": 4.7, "review_count": 137}
+{"business_id": "BUS0007", "name": "Los Excelente Cafeter\u00eda", "city": "Sevilla", "state": "CT", "categories": "Health & Medical, Hotels, Shopping", "stars": 2.5, "review_count": 195}
+{"business_id": "BUS0008", "name": "Los Para\u00edso Bar", "city": "Bilbao", "state": "PV", "categories": "Restaurants, Arts & Entertainment, Health & Medical", "stars": 2.7, "review_count": 109}
+{"business_id": "BUS0009", "name": "El Sabroso Tienda", "city": "Sevilla", "state": "CT", "categories": "Shopping", "stars": 4.3, "review_count": 349}
+{"business_id": "BUS0010", "name": "Los Excelente Tienda", "city": "Barcelona", "state": "PV", "categories": "Bars", "stars": 3.3, "review_count": 309}
+{"business_id": "BUS0011", "name": "Los Para\u00edso Cafeter\u00eda", "city": "M\u00e1laga", "state": "MD", "categories": "Health & Medical, Shopping, Arts & Entertainment", "stars": 3.8, "review_count": 414}
+{"business_id": "BUS0012", "name": "El Excelente Tienda", "city": "M\u00e1laga", "state": "PV", "categories": "Coffee & Tea, Bars, Health & Medical", "stars": 2.7, "review_count": 295}
+{"business_id": "BUS0013", "name": "La Para\u00edso Restaurante", "city": "M\u00e1laga", "state": "VL", "categories": "Bars", "stars": 3.0, "review_count": 295}
+{"business_id": "BUS0014", "name": "El Excelente Tienda", "city": "Madrid", "state": "VL", "categories": "Home Services, Bars, Coffee & Tea", "stars": 4.2, "review_count": 274}
+{"business_id": "BUS0015", "name": "El Rinc\u00f3n Tienda", "city": "M\u00e1laga", "state": "VL", "categories": "Restaurants", "stars": 4.2, "review_count": 180}
+{"business_id": "BUS0016", "name": "La Sabroso Restaurante", "city": "Barcelona", "state": "CT", "categories": "Shopping", "stars": 2.6, "review_count": 27}
+{"business_id": "BUS0017", "name": "Las Sabroso Restaurante", "city": "Zaragoza", "state": "VL", "categories": "Bars, Hotels, Arts & Entertainment", "stars": 3.6, "review_count": 366}
+{"business_id": "BUS0018", "name": "La Para\u00edso Restaurante", "city": "M\u00e1laga", "state": "PV", "categories": "Health & Medical, Hotels, Coffee & Tea", "stars": 2.9, "review_count": 257}
+{"business_id": "BUS0019", "name": "Las Para\u00edso Bar", "city": "Zaragoza", "state": "AN", "categories": "Home Services", "stars": 4.3, "review_count": 362}
+{"business_id": "BUS0020", "name": "La Sabroso Restaurante", "city": "Madrid", "state": "CT", "categories": "Hotels, Home Services", "stars": 4.9, "review_count": 284}
+{"business_id": "BUS0021", "name": "Los Sabroso Bar", "city": "Bilbao", "state": "MD", "categories": "Shopping, Health & Medical, Home Services", "stars": 4.1, "review_count": 210}
+{"business_id": "BUS0022", "name": "El Excelente Restaurante", "city": "Sevilla", "state": "MD", "categories": "Hotels", "stars": 3.8, "review_count": 230}
+{"business_id": "BUS0023", "name": "El Para\u00edso Bar", "city": "Barcelona", "state": "PV", "categories": "Arts & Entertainment, Coffee & Tea, Shopping", "stars": 3.8, "review_count": 63}
+{"business_id": "BUS0024", "name": "Los Rinc\u00f3n Tienda", "city": "M\u00e1laga", "state": "AN", "categories": "Hotels, Restaurants, Shopping", "stars": 3.5, "review_count": 448}
+{"business_id": "BUS0025", "name": "Los Rinc\u00f3n Bar", "city": "Zaragoza", "state": "MD", "categories": "Arts & Entertainment, Health & Medical, Restaurants", "stars": 3.0, "review_count": 300}
+{"business_id": "BUS0026", "name": "Los Rinc\u00f3n Tienda", "city": "Zaragoza", "state": "PV", "categories": "Hotels, Coffee & Tea", "stars": 3.7, "review_count": 437}
+{"business_id": "BUS0027", "name": "La Sabroso Cafeter\u00eda", "city": "Zaragoza", "state": "CT", "categories": "Home Services, Shopping, Hotels", "stars": 4.1, "review_count": 27}
+{"business_id": "BUS0028", "name": "Los Sabroso Restaurante", "city": "M\u00e1laga", "state": "MD", "categories": "Coffee & Tea, Health & Medical, Home Services", "stars": 3.0, "review_count": 322}
+{"business_id": "BUS0029", "name": "Los Para\u00edso Tienda", "city": "Valencia", "state": "VL", "categories": "Restaurants, Home Services", "stars": 2.8, "review_count": 447}
+{"business_id": "BUS0030", "name": "La Sabroso Restaurante", "city": "Valencia", "state": "AN", "categories": "Coffee & Tea", "stars": 3.2, "review_count": 462}
+{"business_id": "BUS0031", "name": "El Sabroso Bar", "city": "M\u00e1laga", "state": "VL", "categories": "Arts & Entertainment, Bars, Coffee & Tea", "stars": 3.4, "review_count": 267}
+{"business_id": "BUS0032", "name": "El Para\u00edso Restaurante", "city": "Zaragoza", "state": "AN", "categories": "Home Services", "stars": 3.6, "review_count": 500}
+{"business_id": "BUS0033", "name": "Los Excelente Bar", "city": "Valencia", "state": "PV", "categories": "Arts & Entertainment, Hotels", "stars": 2.6, "review_count": 139}
+{"business_id": "BUS0034", "name": "Los Para\u00edso Bar", "city": "Bilbao", "state": "CT", "categories": "Hotels", "stars": 2.9, "review_count": 271}
+{"business_id": "BUS0035", "name": "Los Excelente Cafeter\u00eda", "city": "Barcelona", "state": "VL", "categories": "Health & Medical, Bars", "stars": 3.4, "review_count": 157}
+{"business_id": "BUS0036", "name": "La Excelente Tienda", "city": "Valencia", "state": "CT", "categories": "Arts & Entertainment", "stars": 4.0, "review_count": 431}
+{"business_id": "BUS0037", "name": "El Rinc\u00f3n Tienda", "city": "Zaragoza", "state": "VL", "categories": "Coffee & Tea", "stars": 4.0, "review_count": 260}
+{"business_id": "BUS0038", "name": "El Sabroso Restaurante", "city": "M\u00e1laga", "state": "AN", "categories": "Health & Medical", "stars": 4.4, "review_count": 38}
+{"business_id": "BUS0039", "name": "La Sabroso Cafeter\u00eda", "city": "Sevilla", "state": "AN", "categories": "Hotels, Shopping, Coffee & Tea", "stars": 2.8, "review_count": 327}
+{"business_id": "BUS0040", "name": "Los Para\u00edso Restaurante", "city": "M\u00e1laga", "state": "MD", "categories": "Arts & Entertainment, Home Services, Restaurants", "stars": 4.6, "review_count": 207}
+{"business_id": "BUS0041", "name": "Las Sabroso Restaurante", "city": "Zaragoza", "state": "PV", "categories": "Bars, Restaurants", "stars": 4.5, "review_count": 385}
+{"business_id": "BUS0042", "name": "El Excelente Cafeter\u00eda", "city": "Madrid", "state": "VL", "categories": "Hotels", "stars": 4.0, "review_count": 479}
+{"business_id": "BUS0043", "name": "La Para\u00edso Bar", "city": "Madrid", "state": "PV", "categories": "Restaurants, Hotels, Arts & Entertainment", "stars": 3.6, "review_count": 291}
+{"business_id": "BUS0044", "name": "El Para\u00edso Tienda", "city": "Barcelona", "state": "CT", "categories": "Bars, Shopping, Hotels", "stars": 5.0, "review_count": 162}
+{"business_id": "BUS0045", "name": "Los Sabroso Tienda", "city": "Sevilla", "state": "PV", "categories": "Restaurants, Bars, Health & Medical", "stars": 5.0, "review_count": 455}
+{"business_id": "BUS0046", "name": "Las Sabroso Restaurante", "city": "Bilbao", "state": "MD", "categories": "Hotels, Bars, Arts & Entertainment", "stars": 3.4, "review_count": 40}
+{"business_id": "BUS0047", "name": "Los Sabroso Tienda", "city": "Sevilla", "state": "PV", "categories": "Restaurants", "stars": 4.1, "review_count": 389}
+{"business_id": "BUS0048", "name": "Los Excelente Bar", "city": "Sevilla", "state": "MD", "categories": "Arts & Entertainment, Restaurants, Health & Medical", "stars": 4.6, "review_count": 93}
+{"business_id": "BUS0049", "name": "La Para\u00edso Tienda", "city": "Sevilla", "state": "MD", "categories": "Home Services", "stars": 2.6, "review_count": 119}
+{"business_id": "BUS0050", "name": "El Para\u00edso Restaurante", "city": "Barcelona", "state": "VL", "categories": "Shopping, Coffee & Tea, Bars", "stars": 4.3, "review_count": 76}
+{"business_id": "BUS0051", "name": "Las Excelente Restaurante", "city": "Valencia", "state": "MD", "categories": "Bars, Shopping", "stars": 3.1, "review_count": 307}
+{"business_id": "BUS0052", "name": "Las Sabroso Tienda", "city": "Barcelona", "state": "VL", "categories": "Home Services", "stars": 3.4, "review_count": 393}
+{"business_id": "BUS0053", "name": "Los Rinc\u00f3n Restaurante", "city": "Zaragoza", "state": "PV", "categories": "Hotels", "stars": 3.8, "review_count": 403}
+{"business_id": "BUS0054", "name": "Los Rinc\u00f3n Bar", "city": "Sevilla", "state": "AN", "categories": "Hotels", "stars": 3.8, "review_count": 281}
+{"business_id": "BUS0055", "name": "Los Sabroso Restaurante", "city": "Barcelona", "state": "VL", "categories": "Hotels, Shopping", "stars": 2.7, "review_count": 369}
+{"business_id": "BUS0056", "name": "La Para\u00edso Restaurante", "city": "M\u00e1laga", "state": "CT", "categories": "Bars", "stars": 4.1, "review_count": 31}
+{"business_id": "BUS0057", "name": "El Rinc\u00f3n Cafeter\u00eda", "city": "Valencia", "state": "CT", "categories": "Bars, Home Services, Coffee & Tea", "stars": 3.1, "review_count": 82}
+{"business_id": "BUS0058", "name": "La Excelente Cafeter\u00eda", "city": "Madrid", "state": "MD", "categories": "Hotels, Coffee & Tea", "stars": 3.2, "review_count": 483}
+{"business_id": "BUS0059", "name": "Los Para\u00edso Bar", "city": "Sevilla", "state": "VL", "categories": "Restaurants, Arts & Entertainment", "stars": 4.8, "review_count": 143}
+{"business_id": "BUS0060", "name": "La Excelente Bar", "city": "Zaragoza", "state": "AN", "categories": "Shopping, Hotels, Restaurants", "stars": 2.9, "review_count": 214}
+{"business_id": "BUS0061", "name": "El Para\u00edso Cafeter\u00eda", "city": "Sevilla", "state": "VL", "categories": "Home Services, Shopping", "stars": 2.9, "review_count": 438}
+{"business_id": "BUS0062", "name": "Las Sabroso Restaurante", "city": "M\u00e1laga", "state": "AN", "categories": "Shopping", "stars": 4.5, "review_count": 368}
+{"business_id": "BUS0063", "name": "La Sabroso Tienda", "city": "Valencia", "state": "CT", "categories": "Arts & Entertainment", "stars": 4.2, "review_count": 156}
+{"business_id": "BUS0064", "name": "Los Sabroso Tienda", "city": "Bilbao", "state": "CT", "categories": "Hotels, Restaurants, Arts & Entertainment", "stars": 4.5, "review_count": 461}
+{"business_id": "BUS0065", "name": "El Rinc\u00f3n Tienda", "city": "Madrid", "state": "VL", "categories": "Restaurants", "stars": 3.0, "review_count": 487}
+{"business_id": "BUS0066", "name": "Las Rinc\u00f3n Bar", "city": "Bilbao", "state": "VL", "categories": "Hotels", "stars": 2.6, "review_count": 82}
+{"business_id": "BUS0067", "name": "La Sabroso Tienda", "city": "Sevilla", "state": "VL", "categories": "Bars, Hotels", "stars": 3.7, "review_count": 159}
+{"business_id": "BUS0068", "name": "Las Excelente Bar", "city": "Zaragoza", "state": "VL", "categories": "Shopping", "stars": 4.4, "review_count": 282}
+{"business_id": "BUS0069", "name": "La Rinc\u00f3n Restaurante", "city": "Barcelona", "state": "VL", "categories": "Coffee & Tea, Shopping, Arts & Entertainment", "stars": 5.0, "review_count": 120}
+{"business_id": "BUS0070", "name": "Los Excelente Tienda", "city": "Valencia", "state": "VL", "categories": "Arts & Entertainment", "stars": 3.9, "review_count": 189}
+{"business_id": "BUS0071", "name": "Las Excelente Cafeter\u00eda", "city": "Bilbao", "state": "CT", "categories": "Hotels, Health & Medical, Shopping", "stars": 4.6, "review_count": 148}
+{"business_id": "BUS0072", "name": "El Para\u00edso Cafeter\u00eda", "city": "M\u00e1laga", "state": "AN", "categories": "Restaurants", "stars": 4.5, "review_count": 200}
+{"business_id": "BUS0073", "name": "Los Rinc\u00f3n Tienda", "city": "Valencia", "state": "VL", "categories": "Arts & Entertainment, Health & Medical, Bars", "stars": 4.3, "review_count": 141}
+{"business_id": "BUS0074", "name": "Los Rinc\u00f3n Cafeter\u00eda", "city": "Madrid", "state": "PV", "categories": "Health & Medical, Arts & Entertainment, Hotels", "stars": 4.0, "review_count": 80}
+{"business_id": "BUS0075", "name": "La Rinc\u00f3n Cafeter\u00eda", "city": "Zaragoza", "state": "PV", "categories": "Restaurants, Bars, Hotels", "stars": 3.6, "review_count": 48}
+{"business_id": "BUS0076", "name": "Las Rinc\u00f3n Restaurante", "city": "Madrid", "state": "VL", "categories": "Shopping, Home Services", "stars": 4.9, "review_count": 390}
+{"business_id": "BUS0077", "name": "La Excelente Restaurante", "city": "Bilbao", "state": "VL", "categories": "Restaurants", "stars": 4.9, "review_count": 143}
+{"business_id": "BUS0078", "name": "Los Para\u00edso Tienda", "city": "Zaragoza", "state": "CT", "categories": "Bars, Arts & Entertainment", "stars": 4.1, "review_count": 398}
+{"business_id": "BUS0079", "name": "La Sabroso Restaurante", "city": "Bilbao", "state": "AN", "categories": "Hotels", "stars": 3.3, "review_count": 64}
+{"business_id": "BUS0080", "name": "El Sabroso Bar", "city": "M\u00e1laga", "state": "PV", "categories": "Health & Medical, Bars, Restaurants", "stars": 3.0, "review_count": 279}
+{"business_id": "BUS0081", "name": "El Excelente Bar", "city": "Zaragoza", "state": "AN", "categories": "Restaurants, Home Services, Hotels", "stars": 4.2, "review_count": 107}
+{"business_id": "BUS0082", "name": "Las Excelente Tienda", "city": "Barcelona", "state": "CT", "categories": "Health & Medical, Arts & Entertainment", "stars": 3.2, "review_count": 260}
+{"business_id": "BUS0083", "name": "El Rinc\u00f3n Cafeter\u00eda", "city": "Madrid", "state": "AN", "categories": "Hotels, Coffee & Tea", "stars": 3.2, "review_count": 492}
+{"business_id": "BUS0084", "name": "La Excelente Tienda", "city": "Bilbao", "state": "VL", "categories": "Restaurants", "stars": 4.9, "review_count": 456}
+{"business_id": "BUS0085", "name": "El Rinc\u00f3n Restaurante", "city": "Bilbao", "state": "PV", "categories": "Home Services", "stars": 3.9, "review_count": 487}
+{"business_id": "BUS0086", "name": "Las Excelente Restaurante", "city": "Madrid", "state": "MD", "categories": "Hotels, Shopping", "stars": 2.6, "review_count": 114}
+{"business_id": "BUS0087", "name": "El Sabroso Bar", "city": "Barcelona", "state": "MD", "categories": "Hotels, Home Services, Bars", "stars": 3.9, "review_count": 481}
+{"business_id": "BUS0088", "name": "Los Excelente Cafeter\u00eda", "city": "Barcelona", "state": "PV", "categories": "Restaurants", "stars": 5.0, "review_count": 429}
+{"business_id": "BUS0089", "name": "Las Sabroso Cafeter\u00eda", "city": "Sevilla", "state": "PV", "categories": "Arts & Entertainment, Restaurants", "stars": 4.6, "review_count": 260}
+{"business_id": "BUS0090", "name": "Los Para\u00edso Tienda", "city": "Bilbao", "state": "CT", "categories": "Bars, Health & Medical", "stars": 4.0, "review_count": 81}
+{"business_id": "BUS0091", "name": "Los Rinc\u00f3n Bar", "city": "Bilbao", "state": "VL", "categories": "Shopping", "stars": 3.0, "review_count": 378}
+{"business_id": "BUS0092", "name": "Los Para\u00edso Cafeter\u00eda", "city": "Bilbao", "state": "PV", "categories": "Coffee & Tea, Shopping", "stars": 2.7, "review_count": 169}
+{"business_id": "BUS0093", "name": "Las Sabroso Restaurante", "city": "Madrid", "state": "VL", "categories": "Hotels, Arts & Entertainment, Shopping", "stars": 3.0, "review_count": 400}
+{"business_id": "BUS0094", "name": "El Excelente Bar", "city": "Bilbao", "state": "MD", "categories": "Arts & Entertainment", "stars": 3.6, "review_count": 77}
+{"business_id": "BUS0095", "name": "La Para\u00edso Restaurante", "city": "Bilbao", "state": "CT", "categories": "Bars", "stars": 3.1, "review_count": 22}
+{"business_id": "BUS0096", "name": "Las Para\u00edso Restaurante", "city": "Bilbao", "state": "CT", "categories": "Hotels, Shopping, Coffee & Tea", "stars": 2.9, "review_count": 380}
+{"business_id": "BUS0097", "name": "La Rinc\u00f3n Cafeter\u00eda", "city": "Zaragoza", "state": "MD", "categories": "Coffee & Tea", "stars": 2.6, "review_count": 197}
+{"business_id": "BUS0098", "name": "Los Excelente Tienda", "city": "Valencia", "state": "PV", "categories": "Shopping, Health & Medical", "stars": 3.8, "review_count": 16}
+{"business_id": "BUS0099", "name": "El Sabroso Cafeter\u00eda", "city": "Barcelona", "state": "CT", "categories": "Hotels, Restaurants", "stars": 2.6, "review_count": 458}
