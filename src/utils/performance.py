@@ -326,7 +326,7 @@ class PerformanceBenchmark:
         # Redis
         if redis:
             def redis_update():
-                redis.update_ranking_on_review(test_review)
+                redis.update_ranking_on_new_review(test_review)
                 return True
             
             results['redis'] = self.benchmark_function(

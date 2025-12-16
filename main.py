@@ -224,7 +224,7 @@ class NoSQLPractice:
     def run_neo4j_section(self):
         """Ejecutar secciÃ³n de Neo4j"""
         logger.info("="*60)
-        logger.info("EJECUTANDO SECCIÃ“N NEO4J")
+        logger.info("EJECUTANDO SECCION NEO4J")
         logger.info("="*60)
         
         section_results = {}
@@ -244,9 +244,9 @@ class NoSQLPractice:
         return section_results
     
     def run_redis_section(self):
-        """Ejecutar secciÃ³n de Redis"""
+        """Ejecutar seccion de Redis"""
         logger.info("="*60)
-        logger.info("EJECUTANDO SECCIÃ“N REDIS")
+        logger.info("EJECUTANDO SECCION REDIS")
         logger.info("="*60)
         
         section_results = {}
@@ -307,7 +307,7 @@ class NoSQLPractice:
             },
             'neo4j': {
                 'best_for': ['Relaciones complejas', 'Path finding', 'Sistemas de recomendaciÃ³n'],
-                'performance': 'Ã“ptimo para consultas de grafos',
+                'performance': 'Optimo para consultas de grafos',
                 'complexity': 'Alta - Modelado de grafos requiere planificaciÃ³n'
             },
             'redis': {

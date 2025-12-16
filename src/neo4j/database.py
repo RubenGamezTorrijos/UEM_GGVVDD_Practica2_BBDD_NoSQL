@@ -5,6 +5,7 @@ import logging
 import pandas as pd
 from typing import Dict, List, Any
 import os
+from pathlib import Path
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -28,71 +29,107 @@ class Neo4jManager:
                 auth=basic_auth(user, password)
             )
             
-            # Verificar conexión
+            # Verificar conexion
             with self.driver.session() as session:
                 result = session.run("RETURN 'Connected' AS message")
-                logger.info("Conexión a Neo4j establecida exitosamente")
+                logger.info("Conexion a Neo4j establecida exitosamente")
                 
         except Exception as e:
             logger.error(f"Error al conectar a Neo4j: {e}")
             raise
     
     def import_data(self, nodes_file: str, relationships_file: str = None):
-        """Importar datos desde archivos CSV"""
+        """Importar datos desde archivos CSV usando pandas"""
+        # Construir ruta completa al archivo
+        csv_path = Path(__file__).parent.parent.parent / "data" / "processed" / nodes_file
+        
+        if not csv_path.exists():
+            logger.error(f"Archivo no encontrado: {csv_path}")
+            return
+            
+        logger.info(f"Leyendo {csv_path}...")
+        df = pd.read_csv(csv_path)
+        
         with self.driver.session() as session:
             
             # Importar nodos Business
             if "business" in nodes_file:
-                logger.info("Importando nodos Business...")
+                logger.info(f"Importando {len(df)} nodos Business...")
                 
-                query = """
-                LOAD CSV WITH HEADERS FROM $file_path AS row
-                CREATE (b:Business {
-                    business_id: row.`business_id:ID(Business)`,
-                    name: row.name,
-                    city: row.city,
-                    stars: toFloat(row.`stars:float`)
-                })
-                """
+                for idx, row in df.iterrows():
+                    query = """
+                    CREATE (b:Business {
+                        business_id: $business_id,
+                        name: $name,
+                        city: $city,
+                        stars: $stars
+                    })
+                    """
+                    session.run(query, 
+                        business_id=str(row['business_id:ID(Business)']),
+                        name=str(row['name']),
+                        city=str(row['city']),
+                        stars=float(row['stars:float'])
+                    )
                 
-                session.run(query, file_path=f"file:///{nodes_file}")
-                logger.info(f"Nodos Business importados desde {nodes_file}")
+                logger.info(f"Nodos Business importados: {len(df)} nodos creados")
             
-            # Importar nodos User (si existen)
+            # Importar nodos User
             elif "user" in nodes_file:
-                logger.info("Importando nodos User...")
+                logger.info(f"Importando {len(df)} nodos User...")
                 
-                query = """
-                LOAD CSV WITH HEADERS FROM $file_path AS row
-                CREATE (u:User {
-                    user_id: row.`user_id:ID(User)`,
-                    name: row.name,
-                    review_count: toInteger(row.`review_count:int`)
-                })
-                """
+                for idx, row in df.iterrows():
+                    query = """
+                    CREATE (u:User {
+                        user_id: $user_id,
+                        name: $name,
+                        review_count: $review_count
+                    })
+                    """
+                    session.run(query,
+                        user_id=str(row['user_id:ID(User)']),
+                        name=str(row['name']),
+                        review_count=int(row['review_count:int'])
+                    )
                 
-                session.run(query, file_path=f"file:///{nodes_file}")
-                logger.info(f"Nodos User importados desde {nodes_file}")
+                logger.info(f"Nodos User importados: {len(df)} nodos creados")
     
     def create_graph_relationships(self, reviews_file: str):
         """Crear relaciones REVIEWED entre usuarios y negocios"""
         logger.info("Creando relaciones REVIEWED...")
         
-        query = """
-        LOAD CSV WITH HEADERS FROM $file_path AS row
-        MATCH (u:User {user_id: row.`:START_ID(User)`})
-        MATCH (b:Business {business_id: row.`:END_ID(Business)`})
-        CREATE (u)-[r:REVIEWED {
-            review_id: row.`review_id:ID(Review)`,
-            stars: toFloat(row.`stars:float`),
-            date: date(row.`date:date`)
-        }]->(b)
-        """
+        # Construir ruta completa al archivo
+        csv_path = Path(__file__).parent.parent.parent / "data" / "processed" / reviews_file
+        
+        if not csv_path.exists():
+            logger.error(f"Archivo no encontrado: {csv_path}")
+            return
+            
+        logger.info(f"Leyendo {csv_path}...")
+        df = pd.read_csv(csv_path)
+        
+        logger.info(f"Creando {len(df)} relaciones...")
         
         with self.driver.session() as session:
-            session.run(query, file_path=f"file:///{reviews_file}")
+            for idx, row in df.iterrows():
+                query = """
+                MATCH (u:User {user_id: $user_id})
+                MATCH (b:Business {business_id: $business_id})
+                CREATE (u)-[r:REVIEWED {
+                    review_id: $review_id,
+                    stars: $stars,
+                    date: date($date)
+                }]->(b)
+                """
+                session.run(query,
+                    user_id=str(row[':START_ID(User)']),
+                    business_id=str(row[':END_ID(Business)']),
+                    review_id=str(row['review_id:ID(Review)']),
+                    stars=float(row['stars:float']),
+                    date=str(row['date:date'])
+                )
         
-        logger.info("Relaciones REVIEWED creadas")
+        logger.info(f"Relaciones REVIEWED creadas: {len(df)} relaciones")
     
     def run_cypher_queries(self):
         """Ejecutar consultas Cypher"""
@@ -101,7 +138,7 @@ class Neo4jManager:
         with self.driver.session() as session:
             
             # 1. Buscar usuarios que han visitado los mismos negocios
-            logger.info("Ejecutando consulta: Usuarios con negocios en común")
+            logger.info("Ejecutando consulta: Usuarios con negocios en comun")
             
             query = """
             MATCH (u1:User)-[:REVIEWED]->(b:Business)<-[:REVIEWED]-(u2:User)
@@ -118,8 +155,8 @@ class Neo4jManager:
                 dict(record) for record in result
             ]
             
-            # 2. Negocios más "centrales" en la red (grado de conexión)
-            logger.info("Ejecutando consulta: Negocios más centrales")
+            # 2. Negocios mas "centrales" en la red (grado de conexion)
+            logger.info("Ejecutando consulta: Negocios mas centrales")
             
             query = """
             MATCH (b:Business)<-[r:REVIEWED]-()
@@ -136,7 +173,7 @@ class Neo4jManager:
                 dict(record) for record in result
             ]
             
-            # 3. Rutas más cortas entre usuarios (gustos similares)
+            # 3. Rutas mas cortas entre usuarios (gustos similares)
             logger.info("Ejecutando consulta: Rutas entre usuarios similares")
             
             query = """
@@ -152,7 +189,7 @@ class Neo4jManager:
                 dict(record) for record in result
             ]
             
-            # 4. Negocios mejor valorados por categoría implícita
+            # 4. Negocios mejor valorados por categoria implicita
             logger.info("Ejecutando consulta: Negocios mejor valorados")
             
             query = """
@@ -174,8 +211,8 @@ class Neo4jManager:
                 dict(record) for record in result
             ]
             
-            # 5. Análisis de comunidades (usuarios que frecuentan las mismas zonas)
-            logger.info("Ejecutando consulta: Análisis de comunidades por ciudad")
+            # 5. Analisis de comunidades (usuarios que frecuentan las mismas zonas)
+            logger.info("Ejecutando consulta: Analisis de comunidades por ciudad")
             
             query = """
             MATCH (u:User)-[:REVIEWED]->(b:Business)
@@ -202,7 +239,7 @@ class Neo4jManager:
         
         with self.driver.session() as session:
             
-            # Patrón 1: Densidad de conexiones
+            # Patron 1: Densidad de conexiones
             query = """
             MATCH (u:User)
             WITH COUNT(u) AS user_count
@@ -214,9 +251,12 @@ class Neo4jManager:
             """
             
             result = session.run(query)
-            patterns['graph_density'] = dict(result.single())
+            record = result.single()
+            patterns['graph_density'] = dict(record) if record else {
+                'user_count': 0, 'business_count': 0, 'total_reviews': 0, 'connection_density': 0
+            }
             
-            # Patrón 2: Distribución de grados (conexiones por nodo)
+            # Patron 2: Distribucion de grados (conexiones por nodo)
             query = """
             MATCH (u:User)-[r:REVIEWED]->()
             WITH u, COUNT(r) AS degree
@@ -227,9 +267,12 @@ class Neo4jManager:
             """
             
             result = session.run(query)
-            patterns['user_degree_distribution'] = dict(result.single())
+            record = result.single()
+            patterns['user_degree_distribution'] = dict(record) if record else {
+                'avg_user_degree': 0, 'min_user_degree': 0, 'max_user_degree': 0, 'std_user_degree': 0
+            }
             
-            # Patrón 3: Distribución de ratings
+            # Patron 3: Distribucion de ratings
             query = """
             MATCH ()-[r:REVIEWED]->()
             RETURN avg(r.stars) AS avg_rating,
@@ -239,15 +282,18 @@ class Neo4jManager:
             """
             
             result = session.run(query)
-            patterns['rating_distribution'] = dict(result.single())
+            record = result.single()
+            patterns['rating_distribution'] = dict(record) if record else {
+                'avg_rating': 0, 'min_rating': 0, 'max_rating': 0, 'total_ratings': 0
+            }
         
         return patterns
     
     def close(self):
-        """Cerrar conexión"""
+        """Cerrar conexion"""
         if self.driver:
             self.driver.close()
-            logger.info("Conexión a Neo4j cerrada")
+            logger.info("Conexion a Neo4j cerrada")
 
 # Ejemplo de uso
 if __name__ == "__main__":
