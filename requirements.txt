@@ -23,7 +23,7 @@ requests==2.31.0
 pytest==7.4.3
 pytest-benchmark==4.0.0
 
-# Jupyter para anÃ¡lisis
+# Jupyter para Analisis
 jupyter==1.0.0
 matplotlib==3.8.2
 seaborn==0.13.0
