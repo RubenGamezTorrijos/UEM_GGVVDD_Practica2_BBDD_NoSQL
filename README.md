@@ -3,7 +3,7 @@
 Este proyecto implementa una arquitectura políglota para comparar y utilizar las fortalezas de **MongoDB** (Documental), **Neo4j** (Grafos) y **Redis** (Clave-Valor/Caché) sobre el **Yelp Open Dataset**.
 
 ## 📋 Prerequisitos
-*   **Docker Desktop 4.*.*** instalado y en ejecución.
+*   **Docker Desktop 4.55.^** instalado y en ejecución.
 *   **Python 3.10** o superior instalado.
 *   Conexión a internet (para descargar imágenes Docker y librerías).
 
