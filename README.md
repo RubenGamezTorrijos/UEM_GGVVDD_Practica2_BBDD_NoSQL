@@ -55,4 +55,5 @@ Una vez desplegado, puedes explorar los datos visualmente en:
 
 ---
 **Autor**: Ruben Gamez Torrijos
+
 **Versión**: 1.0.0
